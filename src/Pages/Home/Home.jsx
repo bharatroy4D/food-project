@@ -5,9 +5,8 @@ import RightBar from './RightBar/RightBar';
 const Home = () => {
     return (
         <div>
-            <div className='w-9/12 mx-auto'>
+            <div className='w-full md:w-[70%]  lg:w-[80%] xl:w-[90%] mx-auto'>
                 <LeftBar></LeftBar>
-              ddddddddddddddddddddd
             </div>
         </div>
     );

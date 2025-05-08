@@ -49,7 +49,7 @@ const LeftBar = () => {
     return (
         <div>
             <div>
-                <div className='flex flex-col gap-5 p-6 border border-gray-300 rounded shadow-md w-[20%]'>
+                <div className='flex flex-col gap-5 p-6 border border-gray-300 rounded shadow-md w-[25%]'>
                     {
                         fruitsItems.map(fruit => (
                             <div className='flex items-center gap-3  font-semibold'>

@@ -13,6 +13,7 @@ import Blog from './Pages/Blog/Blog.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import About from './Pages/About/About.jsx';
 import Shop from './Pages/Shop/Shop.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",

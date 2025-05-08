@@ -2,7 +2,7 @@ import React from 'react';
 import Top from '../../Components/top/Top';
 import Middle from '../../Components/Middle/Middle';
 import Navbar from '../../Components/Navbar/Navbar';
-import SecondMillde from '../../Components/SecondMiddle/SecondMillde';
+import SecondMillde from '../../Components/SecondMiddle/SecondMiddle';
 import Home from '../../Pages/Home/Home';
 
 const Header = () => {
