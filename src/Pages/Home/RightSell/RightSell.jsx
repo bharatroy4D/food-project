@@ -3,8 +3,8 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 import FoodCard from '../FoodCard/FoodCard';
 import care from '../../../assets/care.webp';
 import container from '../../../assets/container.webp';
-
-
+import discount_1 from '../../../assets/discount_1.webp'
+import discount_2 from '../../../assets/discount_2.webp'
 
 const RightSell = () => {
     const [foods, setFoods] = useState([]);
@@ -99,9 +99,52 @@ const RightSell = () => {
                             </span>
                         </div>
                     </div>
-
                 </div>
+              
             </div>
+              {/* discount demo card */}
+                <div className='flex gap-5 mt-6'>
+                    {/* card-1 */}
+                    <div className='relative overflow-hidden rounded-lg'>
+                        {/* Slider Image */}
+                        <img src={discount_1} alt="slider" className='' />
+
+                        {/* Overlay Text Content */}
+                        <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-2 px-8  text-black'>
+                            <div className='flex items-center'>
+                                <p className='text-green-600 text-sm font-semibold uppercase'>weekend discount 40%</p>
+                            </div>
+                            <h1 className='text-xl md:text-2xl  font-medium max-w-md'>Legumes & Cereals</h1>
+                            <p className='text-gray-500'>Feed your family the best</p>
+                            <div>
+                                <p className='text-lg'>from <span className='text-xl text-red-500 font-medium'>$7.99</span></p>
+                            </div>
+                            <button className='flex items-center gap-2 text-white font-semibold bg-gray-500 rounded-full px-5 py-2 w-fit'>
+                                Shop Now <IoIosArrowRoundForward className='text-sm' />
+                            </button>
+                        </div>
+                    </div>
+                    {/* card-2 */}
+                    <div className='relative overflow-hidden rounded-lg'>
+                        {/* Slider Image */}
+                        <img src={discount_2} alt="slider" className='' />
+
+                        {/* Overlay Text Content */}
+                        <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-2 px-8  text-black'>
+                            <div className='flex items-center '>
+                                <p className='text-green-600 text-sm font-semibold uppercase'>weekend discount 40%</p>
+                            </div>
+                            <h1 className='text-2xl md:text-2xl  font-medium max-w-md'>Legumes & Cereals</h1>
+                            <p className='text-gray-500'>Feed your family the best</p>
+                            <div>
+                                <p className='text-lg'>from <span className='text-xl text-red-500 font-medium'>$7.99</span></p>
+                            </div>
+                            <button className='flex items-center gap-2 text-white font-semibold bg-gray-500 rounded-full px-5 py-2 w-fit'>
+                                Shop Now <IoIosArrowRoundForward className='text-xl' />
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
         </div>
     );

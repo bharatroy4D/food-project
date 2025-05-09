@@ -1,6 +1,7 @@
 import React from 'react';
 import sell_1 from '../../../assets/sell_1.webp'
 import sell_2 from '../../../assets/sell_2.webp'
+import avatar from '../../../assets/avatar-3.webp'
 import { CiMobile4 } from 'react-icons/ci';
 import { CiStopwatch } from "react-icons/ci";
 import { CiDeliveryTruck } from "react-icons/ci";
@@ -39,31 +40,52 @@ const LeftSell = () => {
             {/* card 3 */}
             <div className='relative mt-12  border rounded border-gray-300'>
                 {/* card-1 */}
-                <div className='flex items-center gap-5  px-3 py-5'>
-                    <CiMobile4 className='text-5xl' />
+                <div className='flex items-center gap-5  p-5'>
+                    <CiMobile4 className='text-4xl' />
                     <div className='text-sm'>Download the Bacola App to your phone</div>
                 </div>
                 {/* card-2 */}
-                <div className='flex items-center gap-5 border-t border-gray-300 px-3 py-5 '>
-                    <CiDeliveryTruck className='text-5xl' />
+                <div className='flex items-center gap-5 border-t border-gray-300 p-5 '>
+                    <CiDeliveryTruck className='text-4xl' />
                     <div className='text-sm'>Track the Bacola App to your phone</div>
                 </div>
                 {/* card-3 */}
-                <div className='flex items-center gap-5 border-t border-gray-300 px-3 py-5'>
-                    <CiStopwatch className='text-5xl' />
+                <div className='flex items-center gap-5 border-t border-gray-300 p-5'>
+                    <CiStopwatch className='text-4xl' />
                     <div className='text-sm'>Watch the Bacola App to your phone</div>
                 </div>
                 {/* card-4 */}
-                <div className='flex items-center gap-5 border-t border-gray-300 px-3 py-5'>
-                    <CiLocationOn className='text-5xl' />
+                <div className='flex items-center gap-5 border-t border-gray-300 p-5'>
+                    <CiLocationOn className='text-4xl' />
                     <div className='text-sm'>Location the Bacola App to your phone</div>
                 </div>
                 {/* card-5 */}
-                <div className='flex items-center gap-5 border-t border-gray-300 px-3 py-5'>
-                    <PiHouseLineThin className='text-5xl' />
+                <div className='flex items-center gap-5 border-t border-gray-300 p-5'>
+                    <PiHouseLineThin className='text-4xl' />
                     <div className='text-sm'>House the Bacola App to your phone</div>
                 </div>
             </div>
+            {/*comment card 4 */}
+            <div className='mt-15'>
+                <h1 className='text-xl font-semibold pb-4'>customer comment</h1>
+
+                <div className='  rounded bg-[#FFFBEC] p-6 w-64'>
+                    <div className='flex flex-col gap-3'>
+                        <h1 className='text-xl font-semibold'>The Best Marketplace</h1>
+                        <p className='text-sm text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at ex quam repellat distinctio.</p>
+                        <div className='flex items-center gap-5'>
+                            <img src={avatar} alt="avatar" className='w-14 rounded-full' />
+                            <div>
+                                <h1 className=' font-bold'>
+                                    Tina Mcdonnell
+                                </h1>
+                                <p className='text-xs text-gray-500'>Sales Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 };
