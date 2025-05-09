@@ -24,7 +24,7 @@ const LeftSell = () => {
                 </div>
             </div>
             {/* sell card 2 */}
-            <div className=' mt-10'>
+            <div className='relative mt-10'>
                 <div className='w-60 rounded shadow'>
                     <img src={sell_2} alt="" className='rounded' />
                     <div className='flex flex-col gap-2 absolute top-0 left-0 justify-center p-5'>
