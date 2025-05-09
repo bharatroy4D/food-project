@@ -61,7 +61,7 @@ const LeftBar = () => {
                 <div className='flex flex-col gap-5 p-6 border-gray-300 rounded shadow w-60 border'>
                     {
                         fruitsItems.map(fruit => (
-                            <div className='flex items-center gap-3  font-semibold'>
+                            <div key={fruit.id} className='flex items-center gap-3  font-semibold'>
                                 <p className='text-lg text-gray-400'>{fruit.icon}</p>
                                 <p className='text-sm text-gray-600 hover:text-green-500'>{fruit.name}</p>
                             </div>

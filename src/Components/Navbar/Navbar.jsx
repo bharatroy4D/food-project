@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { RxHamburgerMenu } from 'react-icons/rx';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -7,7 +8,8 @@ const Navbar = () => {
         <div className='w-full md:w-[70%]  lg:w-[80%] xl:w-[90%] mx-auto py-6'>
             <div className=' hidden lg:flex items-center justify-between'>
                 <div>
-                    <p className='flex text-lg font-semibold rounded-md  text-white  bg-[#2BBEF9] py-3 px-6'>All Categories  <MdOutlineKeyboardArrowDown className='text-2xl' /></p>
+                    <p className='flex items-center gap-2 text-lg font-semibold rounded-md  text-white  bg-[#2BBEF9] py-3 px-6'><RxHamburgerMenu className='text-xl '/>
+                        All Categories  <MdOutlineKeyboardArrowDown className='text-2xl' /></p>
                 </div>
                 <div className='flex gap-8 hover font-semibold'>
                     <NavLink to='/'>Home</NavLink>
