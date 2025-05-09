@@ -3,6 +3,7 @@ import LeftBar from './LeftBar/LeftBar';
 import RightBar from './RightBar/RightBar'
 import LeftSell from './LeftSell/LeftSell';
 import RightSell from './RightSell/RightSell';
+import NewsLatter from '../../Components/NewsLatter/NewsLatter';
 
 const Home = () => {
     return (
@@ -16,6 +17,9 @@ const Home = () => {
             <div className=' flex mb-10  gap-10 md:w-[70%]  lg:w-[80%] xl:w-[90%] mx-auto'>
                 <LeftSell></LeftSell>
                 <RightSell></RightSell>
+            </div>
+            <div className='gap-10 md:w-[70%]  lg:w-[80%] xl:w-[100%] mx-auto'>           
+                <NewsLatter></NewsLatter>
             </div>
           
         </div>
