@@ -16,7 +16,7 @@ const RightSell = () => {
     }, []);
 
     return (
-        <div className='px-4 sm:px-6 lg:px-8'>
+        <div className='w-screen'>
             {/* Sell text content */}
             <div>
                 <div className='flex justify-between items-start flex-wrap gap-4'>
