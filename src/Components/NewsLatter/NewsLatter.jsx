@@ -41,7 +41,7 @@ const NewsLatter = () => {
             <img
               src={couponImg}
               alt="Discount Coupon"
-              className="max-w-sm sm:max-w-sm md:max-w-md lg:max-w-xl w-full h-auto  transition-transform duration-500 hover:scale-105"
+              className="max-w-sm sm:max-w-sm md:max-w-md lg:max-w-xl w-full h-auto "
             />
           </div>
         </div>
