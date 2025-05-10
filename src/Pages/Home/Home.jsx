@@ -4,6 +4,7 @@ import RightBar from './RightBar/RightBar'
 import LeftSell from './LeftSell/LeftSell';
 import RightSell from './RightSell/RightSell';
 import NewsLatter from '../../Components/NewsLatter/NewsLatter';
+import ExtraFoods from './ExtraFoods/ExtraFoods';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                 <LeftSell></LeftSell>
                 <RightSell></RightSell>
             </div>
+            <ExtraFoods></ExtraFoods>
         </div>
     );
 };

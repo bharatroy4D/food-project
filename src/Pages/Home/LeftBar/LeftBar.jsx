@@ -57,7 +57,7 @@ import {
 const LeftBar = () => {
     return (
         <div>
-            <div>
+            <div className='hidden lg:block'>
                 <div className='flex flex-col gap-5 p-4 border-gray-300 rounded shadow w-64 border'>
                     {
                         fruitsItems.map(fruit => (

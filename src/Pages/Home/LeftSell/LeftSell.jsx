@@ -10,7 +10,7 @@ import { PiHouseLineThin } from "react-icons/pi";
 
 const LeftSell = () => {
     return (
-        <div className='w-64 rounded '>
+        <div className='w-64 rounded hidden lg:block '>
             {/* sell card one */}
             <div className='relative'>
                 <div className=''>

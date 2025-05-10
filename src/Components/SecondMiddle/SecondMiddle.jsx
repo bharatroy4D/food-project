@@ -15,7 +15,7 @@ const SecondMiddle = () => {
     const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <div className='relative container w-full md:max-w-5xl lg:max-w-7xl px-5 py-4 lg:px-10 mx-auto'>
+        <div className='relative container w-full md:max-w-5xl lg:max-w-7xl  lg:py-4 lg:px-10 mx-auto'>
             {/* Desktop layout */}
             <div className='hidden lg:flex justify-between items-center'>
                 <div>
@@ -53,7 +53,7 @@ const SecondMiddle = () => {
             </div>
 
             {/* Mobile layout */}
-            <div className='flex justify-between px-4 shadow-2xl pb-2 items-center lg:hidden'>
+            <div className='flex justify-between px-4 py-2 shadow-2xl  w-full items-center lg:hidden'>
                 <button onClick={toggleMenu}>
                     <HiOutlineMenuAlt3 className='text-2xl' />
                 </button>
