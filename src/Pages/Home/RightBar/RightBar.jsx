@@ -4,15 +4,15 @@ import slider from '../../../assets/slider-image-1.webp';
 
 const RightBar = () => {
     return (
-        <div className=' w-screen h-[450px] relative overflow-hidden rounded-lg'>
+        <div className='container w-screen h-[450px] relative overflow-hidden rounded'>
             {/* Slider Image */}
             <img src={slider} alt="slider" className='w-full h-full object-cover' />
 
             {/* Overlay Text Content */}
-            <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-5 px-8  text-black'>
+            <div className='container absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-5 p-15  text-black'>
                 <div className='flex items-center gap-4'>
                     <p className='text-sm uppercase'>exclusive offer</p>
-                    <button className='text-sm font-semibold bg-gradient-to-r from-green-400 py-1 px-4 rounded-full text-black'>-20% OFF</button>
+                    <button className='text-sm font-semibold bg-gradient-to-r from-green-400  px-4 rounded-full text-black'>-20% OFF</button>
                 </div>
                 <h1 className='text-4xl md:text-5xl font-bold max-w-md'>Specialist in the grocery store</h1>
                 <p className='text-lg'>only this week. Don't miss...</p>

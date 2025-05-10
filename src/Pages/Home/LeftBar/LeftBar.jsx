@@ -58,7 +58,7 @@ const LeftBar = () => {
     return (
         <div>
             <div>
-                <div className='flex flex-col gap-5 p-6 border-gray-300 rounded shadow w-60 border'>
+                <div className='flex flex-col gap-5 p-4 border-gray-300 rounded shadow w-64 border'>
                     {
                         fruitsItems.map(fruit => (
                             <div key={fruit.id} className='flex items-center gap-3  font-semibold'>
@@ -68,7 +68,7 @@ const LeftBar = () => {
                         ))
                     }
                 </div>
-               <div className='flex flex-col gap-2  text-sm font-semibold text-gray-600 px-6 py-2 mt-2 border-gray-300 rounded shadow w-60 border'>
+               <div className='flex flex-col gap-3  text-sm font-semibold text-gray-600 px-4 py-3 mt-2 border-gray-300 rounded shadow  border'>
                 <p>value of the Day</p>
                 <p>Top 100 Offers</p>
                 <p>new Arrivals</p>

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='w-full md:w-[70%]  lg:w-[80%] xl:w-[90%] mx-auto py-6'>
+        <div className='container w-full md:max-w-5xl lg:max-w-7xl px-5 py-4 lg:px-10 mx-auto'>
             <div className=' hidden lg:flex items-center justify-between'>
                 <div>
                     <p className='flex items-center gap-2  font-semibold rounded-md  text-white  bg-[#2BBEF9] py-3 px-6'><RxHamburgerMenu className='text-xl '/>

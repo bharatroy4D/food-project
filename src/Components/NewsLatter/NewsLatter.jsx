@@ -3,8 +3,8 @@ import couponImg from '../..//assets/coupon.webp' // Replace with your image pat
 
 const NewsLatter = () => {
   return (
-    <section className="bg-blue-800 text-white ">
-      <div className="w-full md:w-[80%] lg:w-[90%] h-[300px] mx-auto grid md:grid-cols-2 items-center justify-between gap-10">
+    <section className="bg-blue-800  text-white ">
+      <div className="container w-full md:max-w-5xl lg:max-w-7xl px-5 lg:px-10 mx-auto h-[311px] grid md:grid-cols-2 items-center justify-between gap-10">
         {/* Text and Form */}
         <div className="py-7">
           <p className="text-lg text-gray-200 mb-2">$20 discount for your first order</p>
@@ -34,11 +34,11 @@ const NewsLatter = () => {
         </div>
 
         {/* Image */}
-        <div className="flex items-end">
+        <div className="relative">
           <img
             src={couponImg}
-            alt="Discount Coupon"
-            className="max-w-xl w-full"
+            alt="Discount Coupon "
+            className="w-full"
           />
         </div>
       </div>

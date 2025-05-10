@@ -4,9 +4,9 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 const Middle = () => {
     return (
-        <div className='hidden xl:block border-b border-gray-300'>
-            <div className='w-full md:w-[80%]  lg:w-[90%]  mx-auto'>
-                <div className='flex justify-between lg:text-sm  items-center py-3 text-gray-600'>
+        <div className='hidden lg:block border-b border-gray-300'>
+            <div className='container w-full md:max-w-5xl lg:max-w-7xl px-5 lg:px-10 mx-auto'>
+                <div className='flex justify-between text-sm  items-center py-3 text-gray-600'>
                     <div className='flex gap-4'>
                         <p>About us</p>
                         <p>Vendor Dashboard</p>

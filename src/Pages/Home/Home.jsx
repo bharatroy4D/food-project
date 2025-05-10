@@ -7,21 +7,17 @@ import NewsLatter from '../../Components/NewsLatter/NewsLatter';
 
 const Home = () => {
     return (
-        <div>
+        <div className='container w-full md:max-w-5xl lg:max-w-7xl px-5 lg:px-10 mx-auto'>
             {/* banner section */}
-            <div className=' flex mb-10  gap-10 md:w-[70%]  lg:w-[80%] xl:w-[90%] mx-auto'>
+            <div className=' flex mb-10  gap-7 '>
                 <LeftBar></LeftBar>
                 <RightBar></RightBar>
             </div>
             {/* best selling section */}
-            <div className=' flex mb-10  gap-10 md:w-[70%]  lg:w-[80%] xl:w-[90%] mx-auto'>
+            <div className=' flex mb-10  gap-7'>
                 <LeftSell></LeftSell>
                 <RightSell></RightSell>
             </div>
-            <div className='gap-10 md:w-[70%]  lg:w-[80%] xl:w-[100%] mx-auto'>           
-                <NewsLatter></NewsLatter>
-            </div>
-          
         </div>
     );
 };
