@@ -1,45 +1,49 @@
 import { FaEnvelope } from "react-icons/fa";
-import couponImg from '../..//assets/coupon.webp' // Replace with your image path
+import couponImg from "../../assets/coupon.webp"; // ensure this path is correct
 
 const NewsLatter = () => {
   return (
-    <section className="bg-blue-800  text-white ">
-      <div className="container w-full md:max-w-5xl lg:max-w-7xl px-5 lg:px-10 mx-auto h-[311px] grid md:grid-cols-2 items-center justify-between gap-10">
-        {/* Text and Form */}
-        <div className="py-7">
-          <p className="text-lg text-gray-200 mb-2">$20 discount for your first order</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Join our newsletter and get...
-          </h2>
-          <p className="text-gray-300 mb-6">
-            Join our email subscription now to get updates on promotions and coupons.
-          </p>
+    <section className="bg-blue-800 text-white">
+      <div className="container max-w-7xl mx-auto px-5 lg:px-10 pt-3  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-x-10 gap-y-10">
+          {/* Text + Form */}
+          <div>
+            <p className="text-lg text-gray-200 mb-2">
+              $20 discount for your first order
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+              Join our newsletter and get...
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Join our email subscription now to get updates on promotions and coupons.
+            </p>
 
-          <form className="flex flex-col sm:flex-row items-center w-96 bg-white rounded-lg overflow-hidden">
-            <div className="flex items-center justify-between  sm:w-auto px-4 py-3">
-              <FaEnvelope className="text-gray-400 mr-2" />
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full outline-none text-gray-700"
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-blue-700 hover:bg-blue-600 text-white font-semibold px-6 py-3 my-1 rounded w-full sm:w-auto"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
+            <form className="flex flex-col sm:flex-row items-center max-w-md bg-white rounded-lg overflow-hidden shadow-md transition-shadow duration-300">
+              <div className="flex items-center w-full sm:w-auto px-4  border border-transparent focus-within:border-blue-600 transition-all duration-300">
+                <FaEnvelope className="text-gray-400 mr-2" />
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  className="w-full outline-none text-gray-700"
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-blue-700 hover:bg-blue-600 hover:shadow-lg transition-all duration-300 text-white font-semibold px-6 py-3 w-full sm:w-auto"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
 
-        {/* Image */}
-        <div className="relative">
-          <img
-            src={couponImg}
-            alt="Discount Coupon "
-            className="w-full"
-          />
+          {/* Image with proper spacing */}
+          <div className="w-full flex justify-center md:justify-end mt-6 md:mt-0">
+            <img
+              src={couponImg}
+              alt="Discount Coupon"
+              className="max-w-sm sm:max-w-sm md:max-w-md lg:max-w-xl w-full h-auto  transition-transform duration-500 hover:scale-105"
+            />
+          </div>
         </div>
       </div>
     </section>

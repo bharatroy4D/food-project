@@ -14,10 +14,10 @@ const RightBar = () => {
       />
 
       {/* Overlay */}
-      <div className='absolute inset-0 bg-black/20'></div>
+      <div className='absolute inset-0 bg-black/10'></div>
 
       {/* Content */}
-      <div className='absolute inset-0 flex flex-col justify-center gap-4 z-10 text-white px-4 sm:px-8 lg:px-16'>
+      <div className='absolute inset-0 flex flex-col justify-center gap-4 z-10 text-gray-700 px-4 sm:px-8 lg:px-16'>
         {/* Offer Label */}
         <div className='flex items-center gap-3'>
           <p className='text-xs sm:text-sm uppercase'>exclusive offer</p>
