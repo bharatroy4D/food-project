@@ -8,7 +8,7 @@ import ExtraFoods from './ExtraFoods/ExtraFoods';
 
 const Home = () => {
     return (
-        <div className='container w-full md:max-w-5xl lg:max-w-7xl px-5 lg:px-10 mx-auto'>
+        <div className='container px-5 lg:px-10 mx-auto'>
             {/* banner section */}
             <div className=' flex mb-10  gap-7 '>
                 <LeftBar></LeftBar>

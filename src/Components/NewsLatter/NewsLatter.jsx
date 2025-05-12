@@ -4,7 +4,7 @@ import couponImg from "../../assets/coupon.webp"; // ensure this path is correct
 const NewsLatter = () => {
   return (
     <section className="bg-blue-800 text-white">
-      <div className="container max-w-7xl mx-auto px-5 lg:px-10 pt-3  ">
+      <div className="container mx-auto px-5 lg:px-10 pt-3  ">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-x-10 gap-y-10">
           {/* Text + Form */}
           <div>

@@ -15,7 +15,7 @@ const SecondMiddle = () => {
     const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <div className='relative container w-full md:max-w-5xl lg:max-w-7xl  lg:py-4 lg:px-10 mx-auto'>
+        <div className='relative container lg:py-4 lg:px-10 mx-auto'>
             {/* Desktop layout */}
             <div className='hidden lg:flex justify-between items-center'>
                 <div>

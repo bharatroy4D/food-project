@@ -2,7 +2,7 @@
     {
       "id": 1,
       "img": "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
-      "des": "Juicy grilled beef burger with cheese",
+      "des": "Juicy grilled beef burger with cheese food",
       "oldPrice": "$6.65",
       "newPrice": "$5.99",
       "category": "Fast Food",
@@ -52,7 +52,7 @@
     {
       "id": 6,
       "img": "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-7-346x310.jpg",
-      "des": "Spicy chicken tacos with fresh salsa",
+      "des": "Spicy chicken tacos with fresh salsa food",
       "oldPrice": "$8.67",
       "newPrice": "$7.80",
       "category": "Mexican",
