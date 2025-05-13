@@ -25,29 +25,29 @@ const Card = () => {
                 {/* Image Left */}
                 <div className="w-full md:w-1/2">
                     <img
-                        src={card.img}
-                        alt={card.category}
+                        src={card?.img}
+                        alt={card?.category}
                         className="w-full h-72 object-cover rounded-md transform hover:scale-110 hover:duration-1000"
                     />
                 </div>
 
                 {/* Text Right */}
                 <div className="w-full md:w-1/2 space-y-4">
-                    <h2 className="text-2xl font-bold text-gray-800">{card.category}</h2>
-                    <p className="text-gray-600">{card.des} Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nemo?</p>
+                    <h2 className="text-2xl font-bold text-gray-800">{card?.category}</h2>
+                    <p className="text-gray-600">{card?.des} Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nemo?</p>
 
                     <div className="space-y-1">
                         <div className='flex items-center gap-3'>
                             <p className="text-lg text-gray-400 font-semibold line-through ">
-                                ৳ {card.oldPrice}
+                                ৳ {card?.oldPrice}
                             </p>
                             <p className="text-lg text-green-600 font-semibold">
-                                ৳ {card.oldPrice}
+                                ৳ {card?.oldPrice}
                             </p>
                         </div>
                         <div className='flex items-center gap-20'>
-                            <p className='font-semibold'>Discount: {card.discount}</p>
-                            <p className='text-gray-500'>{card.label}</p>
+                            <p className='font-semibold'>Discount: {card?.discount}</p>
+                            <p className='text-red-500'>{card?.label}</p>
                         </div>
                     </div>
 
