@@ -13,6 +13,7 @@ import Blog from './Pages/Blog/Blog.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import About from './Pages/About/About.jsx';
 import Shop from './Pages/Shop/Shop.jsx';
+import Card from './Pages/Home/Card/Card.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path:'/about',
         element:<About/>
       },
+      {
+        path:'/card/:id',
+        element:<Card/>
+      }
     ]
   },
 ]);

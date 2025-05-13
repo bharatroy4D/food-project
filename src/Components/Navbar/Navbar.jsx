@@ -19,7 +19,7 @@ const Navbar = () => {
                     </p>
                 </div>
 
-                <div className='flex gap-8 text-lg font-semibold'>
+                <div className='flex gap-8  poppins-thin'>
                     <NavLink to='/' className={navLinkClass}>Home</NavLink>
                     <NavLink to='/shop' className={navLinkClass}>Shop</NavLink>
                     <NavLink to='/storeSingle' className={navLinkClass}>Store Single</NavLink>
@@ -28,7 +28,7 @@ const Navbar = () => {
                     <NavLink to='/contact' className={navLinkClass}>Contact</NavLink>
                 </div>
 
-                <div className='font-semibold text-white bg-blue-400 py-2 px-4 rounded-md'>
+                <div className='font-semibold text-white bg-blue-400 hover:bg-blue-600 py-2 px-4 rounded-md'>
                     <button>Shop Now</button>
                 </div>
             </div>

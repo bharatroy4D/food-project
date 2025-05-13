@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const FoodCard = ({ food }) => {
   const { img, des, oldPrice, newPrice, discount } = food;
@@ -33,10 +34,10 @@ const FoodCard = ({ food }) => {
       </div>
 
       {/* Add to Cart Button */}
-      <div className="flex items-center mx-5 mb-3">
-        <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-2 px-4">
-          Add to cart
-        </button>
+      <div className="flex items-center justify-center mx-5 mb-3">
+        <Link to={`/card/${food.id}`}>  <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-2 px-4">
+          View Details
+        </button></Link>
       </div>
 
       {/* Discount Badge */}
