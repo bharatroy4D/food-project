@@ -6,7 +6,7 @@ const FoodCard = ({ food }) => {
   const { img, des, oldPrice, newPrice, discount } = food;
 
   return (
-    <div className="group relative bg-white rounded border border-gray-200 overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-md">
+    <div className="group relative bg-white rounded border border-gray-200 hover:border hover:border-gray-300 overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-md">
       {/* Image with zoom on hover */}
       <img
         src={img}
@@ -34,7 +34,7 @@ const FoodCard = ({ food }) => {
       </div>
 
       {/* Add to Cart Button */}
-      <div className="flex items-center justify-center mx-5 mb-3">
+      <div className="flex items-center mx-5 mb-3">
         <Link to={`/card/${food.id}`}>  <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-2 px-4">
           View Details
         </button></Link>

@@ -21,9 +21,9 @@ const RightSell = () => {
             <div>
                 <div className='flex justify-between items-start flex-wrap gap-4'>
                     <div className='space-y-1'>
-                        <h1 className='text-xl font-medium uppercase'>new products</h1>
+                        <h1 className='text-xl font-medium uppercase'>Best Sellers</h1>
                         <p className='hidden lg:block text-sm font-semibold text-gray-600'>
-                            New products with updated stocks.
+                            Do not miss the current offers until the end of March..
                         </p>
                     </div>
                     <button className='hidden lg:inline-flex items-center gap-1 border border-gray-400 rounded-full py-2 px-6 text-sm'>
@@ -31,9 +31,9 @@ const RightSell = () => {
                     </button>
                 </div>
             </div>
-
+            {/* Best sellers */}
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
-                {foods.map(food => <FoodCard key={food.id} food={food} />)}
+                {foods.slice(0, 4).map(food => <FoodCard key={food.id} food={food} />)}
             </div>
 
             {/* Carefully banner */}
@@ -82,6 +82,29 @@ const RightSell = () => {
                     </div>
                 </div>
             </div>
+
+            {/* New product */}
+            <div className='py-10'>
+                {/* New product text content */}
+                <div>
+                    <div className='flex justify-between items-start flex-wrap gap-4'>
+                        <div className='space-y-1'>
+                            <h1 className='text-xl font-medium uppercase'>New Products</h1>
+                            <p className='hidden lg:block text-sm font-semibold text-gray-600'>
+                                Do not miss the current offers until the end of March..
+                            </p>
+                        </div>
+                        <button className='hidden lg:inline-flex items-center gap-1 border border-gray-400 rounded-full py-2 px-6 text-sm'>
+                            View All <IoIosArrowRoundForward className='text-xl' />
+                        </button>
+                    </div>
+                </div>
+                {/* Best sellers */}
+                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
+                    {foods.map(food => <FoodCard key={food.id} food={food} />)}
+                </div>
+            </div>
+
 
             {/* Discount demo cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mt-6'>

@@ -8,6 +8,46 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
 import { PiHouseLineThin } from "react-icons/pi";
 
+const trendingProducts = [
+    {
+        id: 1,
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46.jpg",
+        title: "Field Roast Chao Cheese",
+        oldPrice: "$6.99",
+        newPrice: "$5.49",
+    },
+    {
+        id: 2,
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-5.jpg",
+        title: "Vital Farms Pasture",
+        oldPrice: "$7.99",
+        newPrice: "$6.29",
+    },
+    {
+        id: 3,
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-48.jpg",
+        title: "Encore Seafoods Stuffed Alaskan Salmon",
+        oldPrice: "$9.49",
+        newPrice: "$7.99",
+    },
+    {
+        id: 4,
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-4.jpg",
+        title: "Field Roast Chao Cheese Creamy Original",
+        oldPrice: "$2.99",
+        newPrice: "$1.99",
+    },
+    {
+        id: 5,
+        img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-7.jpg",
+        title: "Vital Farms Pasture-Raised ",
+        oldPrice: "$4.49",
+        newPrice: "$3.49",
+    },
+];
+
+
+
 const LeftSell = () => {
     return (
         <div className='w-64 rounded hidden lg:block '>
@@ -58,14 +98,27 @@ const LeftSell = () => {
                 <div className='flex items-center gap-5 border-t border-gray-300 p-5'>
                     <CiLocationOn className='text-4xl' />
                     <div className='text-sm'>Location the Bacola App to your phone</div>
-                </div>
-                {/* card-5 */}
-                <div className='flex items-center gap-5 border-t border-gray-300 p-5'>
-                    <PiHouseLineThin className='text-4xl' />
-                    <div className='text-sm'>House the Bacola App to your phone</div>
-                </div>
+                </div>             
             </div>
-            {/*comment card 4 */}
+            {/* container -4  trending products*/}
+            <div className='border rounded border-gray-300 my-13'>
+                {
+                    trendingProducts.map(product => (
+                        <div key={product.id} className='flex items-center py-4 px-2'>
+                            <img src={product.img} alt="" className='w-20' />
+                            <div className='flex flex-col gap-1'>
+                                <h1 className='text-sm font-semibold text-gray-600'>{product.title}</h1>
+                                <div className='flex gap-3 font-semibold' >
+                                    <span className='text-gray-400 line-through'>{product.oldPrice}</span>
+                                    <span className='text-gray-600'>{product.oldPrice}</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+            {/*comment card 5 */}
             <div className='mt-10'>
                 <h1 className='text-xl font-semibold pb-4 text-center'>customer comment</h1>
 

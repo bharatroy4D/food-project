@@ -9,19 +9,19 @@ import ExtraFoods from './ExtraFoods/ExtraFoods';
 
 const Home = () => {
     return (
-        <div className='container px-5 lg:px-10 mx-auto'>
+        <div className=' mx-auto'>
             {/* banner section */}
-            <div className=' flex mb-10  gap-7 '>
+            <div className='container flex mb-10  gap-7 px-5 lg:px-10 mx-auto '>
                 <LeftBar></LeftBar>
                 <RightBar></RightBar>
             </div>
             {/* best selling section */}
-            <div className=' flex mb-10  gap-7'>
+            <div className='container mx-auto flex mb-10 px-5 lg:px-10  gap-7'>
                 <LeftSell></LeftSell>
                 <RightSell></RightSell>
             </div>
             <ExtraFoods></ExtraFoods>
-            {/* <NewsLatter></NewsLatter> */}
+            <NewsLatter></NewsLatter>
         </div>
     );
 };
