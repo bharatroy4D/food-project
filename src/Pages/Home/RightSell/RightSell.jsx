@@ -21,7 +21,7 @@ const RightSell = () => {
             <div>
                 <div className='flex justify-between items-start flex-wrap gap-4'>
                     <div className='space-y-1'>
-                        <h1 className='text-xl font-medium uppercase'>Best Sellers</h1>
+                        <h1 className='text-xl font-medium uppercase poppins'>Best Sellers</h1>
                         <p className='hidden lg:block text-sm font-semibold text-gray-600'>
                             Do not miss the current offers until the end of March..
                         </p>
@@ -89,7 +89,7 @@ const RightSell = () => {
                 <div>
                     <div className='flex justify-between items-start flex-wrap gap-4'>
                         <div className='space-y-1'>
-                            <h1 className='text-xl font-medium uppercase'>New Products</h1>
+                            <h1 className='text-xl font-medium uppercase poppins'>New Products</h1>
                             <p className='hidden lg:block text-sm font-semibold text-gray-600'>
                                 Do not miss the current offers until the end of March..
                             </p>

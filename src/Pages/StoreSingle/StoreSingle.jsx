@@ -3,7 +3,7 @@ import React from 'react';
 const StoreSingle = () => {
     return (
         <div>
-            this is store
+            
         </div>
     );
 };
