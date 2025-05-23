@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div className=' mx-auto'>
             {/* banner section */}
-            <div className='container flex mb-10  gap-7 px-5 lg:px-10 mx-auto '>
+            <div className='container flex lg:flex-row mb-10  gap-7  px-4  lg:px-10 mx-auto '>
                 <LeftBar></LeftBar>
                 <RightBar></RightBar>
             </div>
