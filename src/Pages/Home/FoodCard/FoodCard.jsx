@@ -35,7 +35,7 @@ const FoodCard = ({ food }) => {
       </div>
 
       {/* Add to Cart Button */}
-      <div className="flex items-center justify-center lg:justify-start  mx-2 lg:mx-5 my-1 lg:my-3">
+      <div className="flex items-center justify-center lg:justify-start  mx-2 lg:mx-5 mb-3 lg:mb-3 lg:my-3">
         <Link to={`/card/${food.id}`}>
           <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-1 mt-1 lg:mt-0 lg:py-2 px-3 lg:px-4">
           View Details

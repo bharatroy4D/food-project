@@ -100,14 +100,14 @@ const RightSell = () => {
                         </button>
                     </div>
                 </div>
-                {/* Best sellers */}
+                {/* New sellers */}
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
                     {foods.map(food => <FoodCard key={food.id} food={food} />)}
                 </div>
             </div>
 
             {/* Discount demo cards */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mt-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mt-'>
                 {[{ img: discount_1, title: "Legumes & Cereals" }, { img: discount_2, title: "Dairy & Eggs" }].map((item, idx) => (
                     <div
                         key={idx}

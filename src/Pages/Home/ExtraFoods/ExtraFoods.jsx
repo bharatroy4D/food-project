@@ -59,7 +59,7 @@ const ExtraFoods = () => {
   ];
 
   return (
-    <div className='pb-15'>
+    <div className='pb-8 lg:pb-15'>
       <div className='container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:grid-rows-2 gap-4 px-5 lg:px-10 mx-auto'>
         {foods.map((food, index) => (
           <div
