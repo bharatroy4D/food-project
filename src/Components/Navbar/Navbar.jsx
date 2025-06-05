@@ -9,7 +9,7 @@ const Navbar = () => {
         isActive ? 'underline underline-offset-4 text-blue-600' : '';
 
     return (
-            <div className='container px-5 py-4 lg:px-10 mx-auto'>
+            <div className='container px-5 lg:py-4 lg:px-10 mx-auto'>
                 <div className='hidden lg:flex items-center justify-between'>
                     <div>
                         <p className='flex items-center gap-2 font-semibold rounded-md text-white bg-[#2BBEF9] py-3 px-6'>

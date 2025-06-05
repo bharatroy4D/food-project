@@ -31,8 +31,9 @@ const RightSell = () => {
                     </button>
                 </div>
             </div>
+
             {/* Best sellers */}
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
                 {foods.slice(0, 4).map(food => <FoodCard key={food.id} food={food} />)}
             </div>
 
@@ -100,11 +101,10 @@ const RightSell = () => {
                     </div>
                 </div>
                 {/* Best sellers */}
-                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
                     {foods.map(food => <FoodCard key={food.id} food={food} />)}
                 </div>
             </div>
-
 
             {/* Discount demo cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mt-6'>
@@ -118,7 +118,7 @@ const RightSell = () => {
                             alt="slider"
                             className='w-full h-56 sm:h-64 md:h-44 lg:h-56 object-cover'
                         />
-                        <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-2 px-4 sm:px-6 lg:px-8 text-black bg-gradient-to-t from-white/80 via-white/60 to-transparent backdrop-blur-[2px]'>
+                        <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-2 px-4 sm:px-6 lg:px-8 text-black bg-gradient-to-t from-white/60 via-white/30 to-transparent backdrop-blur-[2px]'>
                             <p className='text-xs sm:text-sm text-green-600 font-semibold uppercase'>Weekend Discount 40%</p>
                             <h1 className='text-lg sm:text-xl md:text-2xl font-semibold'>{item.title}</h1>
                             <p className='text-xs sm:text-sm text-gray-600'>Feed your family the best</p>
@@ -138,3 +138,4 @@ const RightSell = () => {
 };
 
 export default RightSell;
+  

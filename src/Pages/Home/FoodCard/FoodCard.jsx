@@ -11,13 +11,14 @@ const FoodCard = ({ food }) => {
       <img
         src={img}
         alt={des}
-        className="w-full h-36 object-cover p-5 transition-transform duration-300 group-hover:scale-105"
+        className="w-full h-24 lg:h-36 object-cover p-2 lg:p-5 transition-transform duration-300 group-hover:scale-105"
       />
 
       {/* Content */}
-      <div className="p-5">
-        <p className="text-gray-800 font-semibold text-sm mb-2">{des}</p>
-        <p className="text-green-400 text-xs pb-2 font-semibold uppercase">in stock</p>
+      <div className=" px-2 py-1 lg:py-0 lg:p-5">        
+        <p className="text-gray-800 font-semibold hidden lg:block text-sm mb-2">{des}</p>
+        <p className="text-gray-800 font-semibold lg:hidden text-sm mb-2">{des.slice(0, 26)}...</p>
+        <p className="text-green-400 text-xs pb-2 hidden lg:block font-semibold uppercase">in stock</p>
 
         {/* Star Rating */}
         <div className="flex items-center text-yellow-400 text-xs mb-1 transition-colors duration-300 group-hover:text-yellow-500">
@@ -28,14 +29,14 @@ const FoodCard = ({ food }) => {
 
         {/* Price */}
         <div className="flex items-center font-bold gap-4">
-          <p className="text-gray-400 line-through">{oldPrice}</p>
-          <p className="text-gray-600">{newPrice}</p>
+          <p className="text-gray-400 text-xs lg:text-base line-through">{oldPrice}</p>
+          <p className="text-gray-600 text-xs lg:text-base">{newPrice}</p>
         </div>
       </div>
 
       {/* Add to Cart Button */}
-      <div className="flex items-center mx-5 mb-3">
-        <Link to={`/card/${food.id}`}>  <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-2 px-4">
+      <div className="flex items-center justify-center  mx-2 lg:mx-5 my-1 lg:my-3">
+        <Link to={`/card/${food.id}`}>  <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-1 mt-1 lg:mt-0 lg:py-2 px-3 lg:px-4">
           View Details
         </button></Link>
       </div>

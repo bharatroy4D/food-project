@@ -58,7 +58,7 @@ const LeftBar = () => {
     return (
         <div>
             <div className='hidden lg:block'>
-                <div className='flex flex-col gap-5 p-4 border-gray-300 rounded shadow w-64 border'>
+                <div className='flex flex-col gap-5 p-4 border-gray-300 rounded shadow w-64 flex-shrink-0 border'>
                     {
                         fruitsItems.map(fruit => (
                             <div key={fruit.id} className='flex items-center gap-3  font-semibold'>

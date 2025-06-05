@@ -60,21 +60,21 @@ const ExtraFoods = () => {
 
   return (
     <div className='pb-15'>
-      <div className='container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:grid-rows-2 gap-4 px-5 lg:px-10 mx-auto'>
+      <div className='container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:grid-rows-2 gap-4 px-5 lg:px-10 mx-auto'>
         {foods.map((food, index) => (
           <div
             key={food.id}
             className={`group border border-gray-200 p-5 rounded transition-transform duration-300 hover:scale-105 hover:shadow-md ${
               index === 0
-                ? 'row-span-2 flex flex-col items-center text-center bg-gray-50'
-                : 'flex items-center gap-3'
+                ? 'col-span-2 md:col-span-1 row-span-2 flex flex-col items-center text-center bg-gray-50'
+                : 'flex flex-col sm:flex-row sm:items-center sm:gap-3 text-center sm:text-left'
             }`}
           >
             <img
               src={food.img}
               alt={`Category: ${food.name}`}
-              className={`object-cover transition-transform duration-300 group-hover:scale-110 ${
-                index === 0 ? 'w-40 h-40 mb-3' : 'w-24 h-24'
+              className={`object-cover mx-auto sm:mx-0 transition-transform duration-300 group-hover:scale-110 ${
+                index === 0 ? 'w-40 h-40 mb-3' : 'w-20 h-20 sm:w-24 sm:h-24 mb-2 sm:mb-0'
               }`}
             />
             <div>

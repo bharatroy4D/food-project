@@ -43,30 +43,27 @@ const SecondMiddle = () => {
                         <CiUser className='text-2xl' />
                     </div>
                     <p className='font-semibold text-lg'>$0.00</p>
-                    <div className='bg-gray-300 p-1 rounded-full'>
+                    <div className='bg-gray-300 p-1 rounded-full relative'>
                         <AiOutlineShopping className='text-3xl' />
-                        <div className='relative'>
-                            <p className='text-white text-[8px] bg-red-500 rounded-full py-1 px-2  absolute -top-10 -right-3'>1</p>
-                        </div>
+                        <p className='text-white text-[8px] bg-red-500 rounded-full py-1 px-2 absolute -top-3 -right-2'>1</p>
                     </div>
                 </div>
             </div>
 
             {/* Mobile layout */}
-            <div className='flex justify-between px-4 py-2 shadow-2xl  w-full items-center lg:hidden'>
+            <div className='flex justify-between px-4 py-2 shadow-2xl w-full items-center lg:hidden'>
                 <button onClick={toggleMenu}>
                     <HiOutlineMenuAlt3 className='text-2xl' />
                 </button>
 
                 <img src={banco} alt="logo" className='w-28' />
 
-                <div className='bg-gray-300 p-1 rounded-full'>
-                        <AiOutlineShopping className='text-3xl' />
-                        <div className='relative'>
-                            <p className='text-white text-[8px] bg-red-500 rounded-full py-1 px-2  absolute -top-10 -right-3'>1</p>
-                        </div>
-                    </div>
+                <div className='bg-gray-300 p-1 rounded-full relative'>
+                    <AiOutlineShopping className='text-3xl' />
+                    <p className='text-white text-[8px] bg-red-500 rounded-full py-1 px-2 absolute -top-3 -right-2'>1</p>
+                </div>
             </div>
+
             {/* Mobile Drawer */}
             <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-md z-50 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 {/* Drawer Header */}
@@ -76,18 +73,22 @@ const SecondMiddle = () => {
                         <IoMdClose className='text-2xl' />
                     </button>
                 </div>
+
                 <div className='p-4'>
-                    <p className='flex text-xl rounded-md  text-white bg-[#2BBEF9] py-3 px-6 w-fit'>All Categories  <MdOutlineKeyboardArrowDown className='text-2xl' /></p>
+                    <p className='flex text-xl rounded-md text-white bg-[#2BBEF9] py-3 px-6 w-fit'>
+                        All Categories <MdOutlineKeyboardArrowDown className='text-2xl' />
+                    </p>
                 </div>
+
                 {/* Drawer Menu */}
-                <div className='flex flex-col gap-3 hover font-semibold p-4'>
-                    <NavLink to='/'>Home</NavLink>
-                    <NavLink to='/shop'>Shop</NavLink>
-                    <NavLink to='/storeSingle'>Store Single</NavLink>
-                    <NavLink to='/bakery'>Bakery</NavLink>
-                    <NavLink to='/blog'>Blog</NavLink>
-                    <NavLink to='/contact'>Contact</NavLink>
-                    <NavLink to='/about'>About</NavLink>
+                <div className='flex flex-col gap-3 font-semibold p-4'>
+                    <NavLink to='/' onClick={closeMenu}>Home</NavLink>
+                    <NavLink to='/shop' onClick={closeMenu}>Shop</NavLink>
+                    <NavLink to='/storeSingle' onClick={closeMenu}>Store Single</NavLink>
+                    <NavLink to='/bakery' onClick={closeMenu}>Bakery</NavLink>
+                    <NavLink to='/blog' onClick={closeMenu}>Blog</NavLink>
+                    <NavLink to='/contact' onClick={closeMenu}>Contact</NavLink>
+                    <NavLink to='/about' onClick={closeMenu}>About</NavLink>
                 </div>
             </div>
 
