@@ -23,7 +23,7 @@ const RightBar = () => {
       <Slider {...settings}>
         {[1, 2].map((_, index) => (
           <div key={index}>
-            <div className="relative h-[400px] sm:h-[450px] rounded-lg overflow-hidden max-w-full mx-auto">
+            <div className="relative h-[300px] lg:h-[450px] rounded-lg overflow-hidden max-w-full mx-auto">
               {/* Background Image */}
               <img
                 src={slider}

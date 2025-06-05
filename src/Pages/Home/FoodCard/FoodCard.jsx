@@ -15,7 +15,7 @@ const FoodCard = ({ food }) => {
       />
 
       {/* Content */}
-      <div className=" px-2 py-1 lg:py-0 lg:p-5">        
+      <div className=" px-2 py-1 lg:py-0 lg:p-5">
         <p className="text-gray-800 font-semibold hidden lg:block text-sm mb-2">{des}</p>
         <p className="text-gray-800 font-semibold lg:hidden text-sm mb-2">{des.slice(0, 26)}...</p>
         <p className="text-green-400 text-xs pb-2 hidden lg:block font-semibold uppercase">in stock</p>
@@ -35,8 +35,9 @@ const FoodCard = ({ food }) => {
       </div>
 
       {/* Add to Cart Button */}
-      <div className="flex items-center justify-center  mx-2 lg:mx-5 my-1 lg:my-3">
-        <Link to={`/card/${food.id}`}>  <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-1 mt-1 lg:mt-0 lg:py-2 px-3 lg:px-4">
+      <div className="flex items-center justify-center lg:justify-start  mx-2 lg:mx-5 my-1 lg:my-3">
+        <Link to={`/card/${food.id}`}>
+          <button className="text-sm text-[#51A2FF] font-medium border border-[#51A2FF] hover:bg-[#51A2FF] hover:text-white transition-colors duration-300 rounded-full w-full py-1 mt-1 lg:mt-0 lg:py-2 px-3 lg:px-4">
           View Details
         </button></Link>
       </div>

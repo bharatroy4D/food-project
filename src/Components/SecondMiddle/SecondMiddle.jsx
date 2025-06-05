@@ -81,7 +81,7 @@ const SecondMiddle = () => {
                 </div>
 
                 {/* Drawer Menu */}
-                <div className='flex flex-col gap-3 font-semibold p-4'>
+                <div className='flex flex-col gap-3 font-semibold px-4'>
                     <NavLink to='/' onClick={closeMenu}>Home</NavLink>
                     <NavLink to='/shop' onClick={closeMenu}>Shop</NavLink>
                     <NavLink to='/storeSingle' onClick={closeMenu}>Store Single</NavLink>
