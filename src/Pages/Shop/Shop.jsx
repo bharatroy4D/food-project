@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 const categories = ["All", "Fast Food", "Vegan", "Dessert", "Seafood"];
 
 const SimpleLoader = () => (
-  <div className="flex flex-col justify-center items-center min-h-[300px]">
+  <div className="flex flex-col justify-center items-center min-h-[250px]">
     <div className="flex space-x-2">
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-150"></span>
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-300"></span>
+      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-75"></span>
+      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-1000"></span>
       <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce"></span>
     </div>
     <p className="mt-4 text-gray-700 font-medium">Loading ...</p>

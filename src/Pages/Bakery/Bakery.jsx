@@ -4,7 +4,7 @@ import { FaStar, FaRegStar } from 'react-icons/fa';
 const bakeryItems = [
   {
     id: 1,
-    name: 'Chocolate Croissant',
+    name: 'Chocolate Croiss',
     image:
       'https://img.freepik.com/free-vector/vector-3d-splashes-melted-chocolate-milk-with-falling-pieces-chocolate-bars_1441-492.jpg?uid=R180858093&semt=ais_hybrid&w=740',
     price: '$2.99',
@@ -84,13 +84,13 @@ const bakeryItems = [
   },
 ];
 
-// SimpleLoader component
+// Loader
 const SimpleLoader = () => (
   <div className="flex flex-col justify-center items-center min-h-[300px]">
     <div className="flex space-x-2">
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-150"></span>
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-300"></span>
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce"></span>
+      <span className="w-4 h-4 bg-orange-500 rounded-full animate-bounce delay-150"></span>
+      <span className="w-4 h-4 bg-orange-500 rounded-full animate-bounce delay-300"></span>
+      <span className="w-4 h-4 bg-orange-500 rounded-full animate-bounce"></span>
     </div>
     <p className="mt-4 text-gray-700 font-medium">Loading ...</p>
   </div>
@@ -100,7 +100,7 @@ const Bakery = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000); // 2 seconds loading
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -113,27 +113,34 @@ const Bakery = () => {
   }
 
   return (
-    <div className="container mx-auto px-5 lg:px-10 py-10">
-      <h2 className="text-3xl font-bold text-center mb-8 text-orange-600">Our Bakery Items</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="container mx-auto px-4 lg:px-10 py-10">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-orange-600">Our Bakery Items</h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {bakeryItems.map((item) => (
           <div
             key={item.id}
-            className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition relative"
+            className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition"
           >
-            <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
-              <p className="text-sm text-gray-500 mt-1">{item.category}</p>
-              <div className="flex items-center mt-2">
+            <img src={item.image} alt={item.name} className="w-full  h-24 lg:h-44 object-cover" />
+            <div className="p-2 lg:p-4">
+              <h3 className="text-sm sm:text-base font-semibold text-gray-800">{item.name}</h3>
+              <p className="text-xs sm:text-sm hidden lg:block text-gray-500">{item.category}</p>
+
+              <div className="flex items-center  mt-1 sm:mt-2 text-xs text-yellow-500">
                 {[...Array(5)].map((_, i) => (
                   <span key={i}>{i < item.rating ? <FaStar /> : <FaRegStar />}</span>
                 ))}
+                <span className="text-xs  lg:hidden ml-5 font-bold text-orange-500">{item.price}</span>
               </div>
-              <p className="text-gray-700 text-sm mt-2">{item.description}</p>
-              <div className="flex items-center justify-between mt-4">
-                <span className="text-xl font-bold text-orange-500">{item.price}</span>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded-xl hover:bg-orange-600 transition">
+
+              <p className="text-xs sm:text-sm text-gray-700 mt-2 line-clamp-2">
+                {item.description}
+              </p>
+
+              <div className="flex items-center justify-between mt-2 lg:mt-3 sm:mt-4">
+                <span className="text-sm sm:text-lg font-bold hidden lg:block text-orange-500">{item.price}</span>
+                <button className="bg-orange-500 text-white text-xs sm:text-sm px-3 py-1 sm:px-4 sm:py-2 rounded-xl hover:bg-orange-600 transition">
                   Add to Cart
                 </button>
               </div>

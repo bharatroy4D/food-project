@@ -88,7 +88,6 @@ const SecondMiddle = () => {
                     <NavLink to='/bakery' onClick={closeMenu}>Bakery</NavLink>
                     <NavLink to='/blog' onClick={closeMenu}>Blog</NavLink>
                     <NavLink to='/contact' onClick={closeMenu}>Contact</NavLink>
-                    <NavLink to='/about' onClick={closeMenu}>About</NavLink>
                 </div>
             </div>
 
