@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div>
             <Top></Top>
-            <Middle></Middle>
+            {/* <Middle></Middle> */}
             <SecondMillde></SecondMillde>
             <Navbar></Navbar>
         

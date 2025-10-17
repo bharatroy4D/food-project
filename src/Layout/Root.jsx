@@ -8,9 +8,8 @@ import TopScroll from '../Components/TopScroll/TopScroll';
 const Root = () => {
     return (
         <div>
-            <TopScroll/>
+            <TopScroll />
             <Header></Header>
-            {/* <NewsLatter></NewsLatter> */}
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
