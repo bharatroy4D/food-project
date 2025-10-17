@@ -88,14 +88,13 @@ const Shop = () => {
       : foods.filter((food) => food.category === selectedCategory);
 
   return (
-    <div className="container mx-auto px-5 lg:px-10 py-8">
-
+    <div>
       {/* 🏞️ Shop Banner */}
-      <div className="relative mb-10 rounded-2xl overflow-hidden">
+      <div className="relative mb-10  overflow-hidden">
         <img
           src="https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723451.jpg"
           alt="Shop Banner"
-          className="w-full h-48 lg:h-96 object-cover brightness-75"
+          className="w-full h-48 lg:h-screen object-cover brightness-75"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
           <h1 className="text-3xl lg:text-5xl font-bold mb-2">🍽️ Welcome to Food Shop</h1>
@@ -104,54 +103,55 @@ const Shop = () => {
           </p>
         </div>
       </div>
+      <div className="container mx-auto px-5 lg:px-10 py-8">
 
-      {/* Category Filter */}
-      <div className="mb-6 flex justify-center lg:justify-start flex-wrap gap-3 lg:gap-4">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-1 lg:py-2 rounded-full border transition-colors
-              ${
-                selectedCategory === cat
+        {/* Category Filter */}
+        <div className="mb-6 flex justify-center lg:justify-start flex-wrap gap-3 lg:gap-4">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-4 py-1 lg:py-2 rounded-full border transition-colors
+              ${selectedCategory === cat
                   ? "bg-green-600 text-white border-green-600"
                   : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
-              }
+                }
             `}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
 
-      {/* Food Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredFoods.map((food) => (
-          <div
-            key={food.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
-          >
-            <img
-              src={food.image}
-              alt={food.name}
-              className="w-full h-24 lg:h-36 object-cover"
-            />
-            <div className="p-2 lg:p-4">
-              <h2 className="text-sm sm:text-base font-semibold text-gray-800">
-                {food.name}
-              </h2>
-              <p className="text-xs hidden lg:block sm:text-sm text-gray-500 mt-1">
-                {food.category}
-              </p>
-              <p className="text-xs sm:text-sm text-gray-700 mt-2 line-clamp-2">
-                {food.description}
-              </p>
-              <p className="text-sm sm:text-base text-green-600 font-bold pt-2 lg:mt-4">
-                ৳{food.price}
-              </p>
+        {/* Food Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {filteredFoods.map((food) => (
+            <div
+              key={food.id}
+              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+            >
+              <img
+                src={food.image}
+                alt={food.name}
+                className="w-full h-24 lg:h-36 object-cover"
+              />
+              <div className="p-2 lg:p-4">
+                <h2 className="text-sm sm:text-base font-semibold text-gray-800">
+                  {food.name}
+                </h2>
+                <p className="text-xs hidden lg:block sm:text-sm text-gray-500 mt-1">
+                  {food.category}
+                </p>
+                <p className="text-xs sm:text-sm text-gray-700 mt-2 line-clamp-2">
+                  {food.description}
+                </p>
+                <p className="text-sm sm:text-base text-green-600 font-bold pt-2 lg:mt-4">
+                  ৳{food.price}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
