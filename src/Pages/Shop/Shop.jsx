@@ -1,17 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const categories = ["All", "Fast Food", "Vegan", "Dessert", "Seafood"];
-
-const SimpleLoader = () => (
-  <div className="flex flex-col justify-center items-center min-h-[250px]">
-    <div className="flex space-x-2">
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-75"></span>
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce delay-1000"></span>
-      <span className="w-4 h-4 bg-blue-600 rounded-full animate-bounce"></span>
-    </div>
-    <p className="mt-4 text-gray-700 font-medium">Loading ...</p>
-  </div>
-);
 
 const Shop = () => {
   const foods = [
@@ -32,7 +21,8 @@ const Shop = () => {
       category: "Vegan",
       image:
         "https://img.freepik.com/premium-photo/hummus-plate-with-copyspace-tablet-top-view_116547-2292.jpg",
-      description: "Creamy chickpea hummus drizzled with olive oil, served with warm pita.",
+      description:
+        "Creamy chickpea hummus drizzled with olive oil, served with warm pita.",
     },
     {
       id: 3,
@@ -91,29 +81,29 @@ const Shop = () => {
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [loading, setLoading] = useState(true);
 
   const filteredFoods =
     selectedCategory === "All"
       ? foods
       : foods.filter((food) => food.category === selectedCategory);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen bg-white">
-        <SimpleLoader />
-      </div>
-    );
-  }
-
   return (
     <div className="container mx-auto px-5 lg:px-10 py-8">
-      <h1 className="text-2xl font-bold mb-6">🍽️ Food Shop</h1>
+
+      {/* 🏞️ Shop Banner */}
+      <div className="relative mb-10 rounded-2xl overflow-hidden">
+        <img
+          src="https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723451.jpg"
+          alt="Shop Banner"
+          className="w-full h-48 lg:h-96 object-cover brightness-75"
+        />
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-2">🍽️ Welcome to Food Shop</h1>
+          <p className="text-sm lg:text-lg text-gray-200">
+            Explore delicious foods from different categories
+          </p>
+        </div>
+      </div>
 
       {/* Category Filter */}
       <div className="mb-6 flex justify-center lg:justify-start flex-wrap gap-3 lg:gap-4">
@@ -121,11 +111,11 @@ const Shop = () => {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4  py-1 lg:py-2 rounded-full border transition-colors
+            className={`px-4 py-1 lg:py-2 rounded-full border transition-colors
               ${
                 selectedCategory === cat
                   ? "bg-green-600 text-white border-green-600"
-                  : "bg-white text-gray-700 border-gray-300"
+                  : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
               }
             `}
           >
@@ -144,11 +134,15 @@ const Shop = () => {
             <img
               src={food.image}
               alt={food.name}
-              className="w-full h-24 lg:h-36  object-cover"
+              className="w-full h-24 lg:h-36 object-cover"
             />
             <div className="p-2 lg:p-4">
-              <h2 className="text-sm sm:text-base font-semibold text-gray-800">{food.name}</h2>
-              <p className="text-xs hidden lg:block sm:text-sm text-gray-500 mt-1">{food.category}</p>
+              <h2 className="text-sm sm:text-base font-semibold text-gray-800">
+                {food.name}
+              </h2>
+              <p className="text-xs hidden lg:block sm:text-sm text-gray-500 mt-1">
+                {food.category}
+              </p>
               <p className="text-xs sm:text-sm text-gray-700 mt-2 line-clamp-2">
                 {food.description}
               </p>
